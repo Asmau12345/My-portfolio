@@ -1,65 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>3D Code Cube Portfolio</title>
-    <style>
-        body { margin: 0; background: #000; overflow: hidden; }
-        canvas { display: block; }
-    </style>
+    <title>3D Cube</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="cube">
-    <div class="face front"></div>
-    <div class="face back"></div>
-    <div class="face right"></div>
-    <div class="face left"></div>
-    <div class="face top"></div>
-    <div class="face bottom"></div>
+
+<div class="scene">
+    <div class="cube">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+        <div class="face right">Right</div>
+        <div class="face left">Left</div>
+        <div class="face top">Top</div>
+        <div class="face bottom">Bottom</div>
+    </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-    // Scene, Camera, Renderer
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-    camera.position.z = 5;
 
-    // Cube Geometry
-    const geometry = new THREE.BoxGeometry(2, 2, 2);
-
-    // Textures with code snippets
-    const loader = new THREE.TextureLoader();
-    const materials = [
-        new THREE.MeshBasicMaterial({ map: loader.load('https://your-code-image1-url.png') }),
-        new THREE.MeshBasicMaterial({ map: loader.load('https://your-code-image2-url.png') }),
-        new THREE.MeshBasicMaterial({ map: loader.load('https://your-code-image3-url.png') }),
-        new THREE.MeshBasicMaterial({ map: loader.load('https://your-code-image4-url.png') }),
-        new THREE.MeshBasicMaterial({ map: loader.load('https://your-code-image5-url.png') }),
-        new THREE.MeshBasicMaterial({ map: loader.load('https://your-code-image6-url.png') })
-    ];
-    const cube = new THREE.Mesh(geometry, materials);
-    scene.add(cube);
-
-    // Animation Loop
-    function animate() {
-        requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-    }
-
-    animate();
-
-    // Resize Listener
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-    <script src="script.js"></script>
 </body>
 </html>

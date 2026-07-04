@@ -1,92 +1,47 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'segoe UI', Sans-serif;
-}
-body{
-    background: #aaaaaa;
-    color: #ffffff;
-    display: flex;
-    perspective: 800px;
     height: 100vh;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background: #111;
+    perspective: 800px;
 }
+
 .scene {
     transform-style: preserve-3d;
 }
+
 .cube {
-    position: relative;
     width: 120px;
     height: 120px;
+    position: relative;
     transform-style: preserve-3d;
-    transform: rotateX(30deg)  rotateY(30deg);
+    animation: spin 5s infinite linear;
 }
-nav {
-    display:flex;
-    justify-content: space-between;
-    padding:20px 50px;
-}
-nav ul {
+
+.face {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: cyan;
+    border: 2px solid #000;
     display: flex;
-    list-style: none;
-    gap: 20px;
-}
-nav a {
-    text-decoration: none;
-    color: #aaaaaa;
-}
-nav a:hover {
-    color: white;
-}
-.hero {
-    height: 90vh;
-    display: flex;
-    flex-direction:  column;
     justify-content: center;
-    padding: 0 50px;
+    align-items: center;
+    font-weight: bold;
 }
-.hero h1 {
-    font-size: 3rem;
-}
-.hero p {
-    margin: 10px 0 20px;
-    color:#aaa;
-}
-.buttons a {
-    padding: 10px 20px;
-    margin-right: 10px;
-    text-decoration: none;
-    background: #ffffff;
-    color: black;
-}
-.buttons .outline {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-}
-#projects {
-    padding: 50px;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-.card {
-    background: #1a1a1a;
-    padding: 20px;
-    transition: 0.3s;
-}
-.card:hover {
-    transform: translateY(-5px);
-}
-section {
-    margin-bottom: 60px;
-}
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition:0.6s ease;
+
+/* positioning sides */
+.front  { transform: translateZ(60px); }
+.back   { transform: rotateY(180deg) translateZ(60px); }
+.right  { transform: rotateY(90deg) translateZ(60px); }
+.left   { transform: rotateY(-90deg) translateZ(60px); }
+.top    { transform: rotateX(90deg) translateZ(60px); }
+.bottom { transform: rotateX(-90deg) translateZ(60px); }
+
+/* animation */
+@keyframes spin {
+    from { transform: rotateX(0) rotateY(0); }
+    to   { transform: rotateX(360deg) rotateY(360deg); }
 }
