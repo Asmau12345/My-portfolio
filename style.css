@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     background: #111;
-    perspective: 800px;
+    perspective: 1200px;
 }
 
 .scene {
@@ -30,6 +30,8 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    box-shadow: 0 0 15px
+    rgba(0, 255, 255, 0.6);
 }
 
 /* positioning sides */
