@@ -18,6 +18,13 @@ window.addEventListener("scroll", () => {
             sec.style.opacity = 1;
             sec.style.trasform = "translateY(0)";
         }
-
+        const materials = [
+            new THREE.MeshBasicMaterial({ color: 0x00ffcc }),
+            new THREE.MeshBasicMaterial({ color: 0xff00ff }),
+            new THREE.MeshBasicMaterial({ color: 0x0088ff }),
+            new THREE.MeshBasicMaterial({ color: 0xffff00 }),
+            new THREE.MeshBasicMaterial({ color: 0xff5500 }),
+            new THREE.MeshBasicMaterial({ color: 0xffffff })
+        ];
     })
 })
