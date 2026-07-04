@@ -1,12 +1,23 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <title>Asmau Umar</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>3D Code Cube Portfolio</title>
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; }
+        canvas { display: block; }
+    </style>
 </head>
 <body>
+<div class="cube">
+    <div class="face front"></div>
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
     // Scene, Camera, Renderer
@@ -49,42 +60,6 @@
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
-</script>
-</body>
-</html>
-<nav>
-    <h2>Asmau Umar</h2>
-    <ul>
-        <li><a href="projects">projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="contact">contact</a></li>
-    </ul>
-</nav>
-<section class="hero">
-    <h1>Full Stack Developer/ Software Developer</h1>
-    <p> I build fast, modern and responsive web application</p>
-    <div class="buttons">
-        <a href="projects">View work</a>
-        <a href="contact" class="outline">contact Me</a>
-    </div>
-</section>
-<section id="projects">
-    <h2> projects</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>project one</h3>
-            <p>Simple description of what it does</p>
-        </div>
-    </div>
-</section>
-<section id="about">
-    <h2>About</h2>
-    <p>I'm a developer focused on building clean and functional web apps.</p>
-</section>
-<section id="contact">
-    <h2>contact</h2>
-    <p>Email: asmauomar2@gamil.com</p>
-</section>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

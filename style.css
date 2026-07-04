@@ -7,6 +7,21 @@
 body{
     background: #aaaaaa;
     color: #ffffff;
+    display: flex;
+    perspective: 800px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.scene {
+    transform-style: preserve-3d;
+}
+.cube {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+    transform: rotateX(30deg)  rotateY(30deg);
 }
 nav {
     display:flex;
@@ -20,7 +35,7 @@ nav ul {
 }
 nav a {
     text-decoration: none;
-    color: #aaa;
+    color: #aaaaaa;
 }
 nav a:hover {
     color: white;
