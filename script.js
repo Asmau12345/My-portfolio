@@ -61,8 +61,8 @@ document.addEventListener("mousemove", (event) => {
     const x = (event.clientX / window.innerWidth - 0.5) * 2;
     const y = (event.clientY / window.innerHeight - 0.5) * 2;
 
-    cube.rotation.x = y * 0.5;
-    cube.rotation.y = x * 0.5;
+    cube.rotation.x = y * 0.005;
+    cube.rotation.y = x * 0.005;
 });
 gsap.from(".hero h1", {
     y: -50,
