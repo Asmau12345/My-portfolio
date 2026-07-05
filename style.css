@@ -1,54 +1,44 @@
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+/* HERO */
+.hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #111;
-    perspective: 1200px;
+    text-align: center;
 }
 
-.scene {
-    transform-style: preserve-3d;
+.hero h1 {
+    font-size: 50px;
 }
 
-.cube {
-    width: 120px;
-    height: 120px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: spin 5s infinite linear;
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
-.face {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background: rgba(255,255,255,255,0.1);
-    border: 2px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    box-shadow: 0 0 20px #00f, 0 0 40px #0ff;
-    rgba(0, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* positioning sides */
-.front  { transform: translateZ(60px); }
-.back   { transform: rotateY(180deg) translateZ(60px); }
-.right  { transform: rotateY(90deg) translateZ(60px); }
-.left   { transform: rotateY(-90deg) translateZ(60px); }
-.top    { transform: rotateX(90deg) translateZ(60px); }
-.bottom { transform: rotateX(-90deg) translateZ(60px); }
-
-/* animation */
-@keyframes spin {
-    from { transform: rotateX(0) rotateY(0); }
-    to   { transform: rotateX(360deg) rotateY(360deg); }
+/* PROJECT CARDS */
+.projects {
+    display: grid;
+    gap: 20px;
 }
-@keyframes spin {
-    from { transform: rotateX(0)  rotateY(0); }
-    to { transform: rotateX(360deg); }
+
+.project-card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
 }
