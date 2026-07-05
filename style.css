@@ -24,14 +24,15 @@ body {
     position: absolute;
     width: 120px;
     height: 120px;
-    background: cyan;
+    background: rgba(255,255,255,255,0.1);
     border: 2px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    box-shadow: 0 0 15px
+    box-shadow: 0 0 20px #00f, 0 0 40px #0ff;
     rgba(0, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
 }
 
 /* positioning sides */
@@ -46,4 +47,8 @@ body {
 @keyframes spin {
     from { transform: rotateX(0) rotateY(0); }
     to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+@keyframes spin {
+    from { transform: rotateX(0)  rotateY(0); }
+    to { transform: rotateX(360deg); }
 }
