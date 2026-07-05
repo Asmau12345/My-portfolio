@@ -78,3 +78,32 @@ section {
     transform: translateY(40px);
     transition: 0.6s ease;
 }
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Glow text */
+.hero h1 {
+    text-shadow: 0 0 10px #00f5c3, 0 0 20px #00f5c3;
+}
+
+/* Cursor hover effect */
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #00f5c3;
+}
+
+/* Card glow on hover */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 245, 195, 0.4);
+}
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
