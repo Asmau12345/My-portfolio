@@ -83,3 +83,13 @@ gsap.from("button", {
     duration: 0.5,
     delay: 0.6
 });
+const skillsTitle = document.getElementById("skills-title");
+const skills = document.querySelectorAll(".skill");
+
+skillsTitle.addEventListener("click", () => {
+    skills.forEach((skill, index) => {
+        setTimeout(() => {
+            skill.classList.toggle("active");
+        }, index * 200); // delay for stagger effect
+    });
+});

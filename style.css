@@ -128,3 +128,25 @@ button:hover {
     color: white;
     text-decoration: none;
 }
+.skills-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.skill.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon {
+    font-size: 40px;
+}
