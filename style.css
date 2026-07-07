@@ -9,6 +9,7 @@ body {
 ul {
     display: flex;
     gap: 20px;
+    padding-right: 40px;
 }
 li:last-child {
     margin-left: auto;
