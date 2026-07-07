@@ -6,6 +6,10 @@
 body {
     background: #18181B
 }
-.hire me {
-    margin-left: 100px;
+ul {
+    display: flex;
+    gap: 20px;
+}
+li:last-child {
+    margin-left: auto;
 }
