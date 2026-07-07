@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(135deg,#18181B,#1D4ED8);
+    background: linear-gradient(135deg,#000000,#27272A);
 }
 ul {
     display: flex;
