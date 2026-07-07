@@ -35,15 +35,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 camera.position.setZ(5);
 
-// Cube
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({
-    color: 0x00f5c3,
-    wireframe: true,
-});
 
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
 
 // Animation loop
 function animate() {
