@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asmau | Full Stack Developer & UX/UI</title>
+    <meta name="description" content="Asmau — Full Stack Developer & UX/UI Designer with 5+ years of experience building modern, responsive web experiences.">
+    <meta name="author" content="Asmau">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:title" content="Asmau | Full Stack Developer & UX/UI">
+    <meta property="og:description" content="Full Stack Developer & UX/UI Designer building modern, responsive web experiences.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D1B2A'/><text x='50' y='68' font-size='55' font-family='Arial' font-weight='bold' fill='%232CE8C5' text-anchor='middle'>A</text></svg>">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,8 +46,21 @@
         <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">View Projects</a>
             <a href="#contact" class="btn btn-outline">Hire Me</a>
+            <a href="resume.pdf" class="btn btn-ghost" download>Download CV</a>
+        </div>
+        <div class="hero-socials">
+            <a href="https://github.com/au12345" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            <a href="mailto:asmauomar2@gmail.com" aria-label="Email">Email</a>
         </div>
     </div>
+
+    <div class="hero-photo-wrap">
+        <div class="hero-photo">
+            <span>Photo</span>
+        </div>
+    </div>
+
     <div class="scroll-indicator">
         <span></span>
         <p>Scroll</p>
@@ -76,22 +99,35 @@
     <h2 class="section-heading">What I work with</h2>
     <div class="skills-grid">
         <div class="skill-card">
-            <span class="skill-icon">🖥️</span>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3z"/>
+                <path d="M8 8h8l-.3 3.5H8.4M8.3 11.5l.3 4L12 16.5l3.4-1 .3-3"/>
+            </svg>
             <h3>HTML</h3>
             <p>Semantic, accessible structure</p>
         </div>
         <div class="skill-card">
-            <span class="skill-icon">🎨</span>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3a9 9 0 0 1 0 18 4.5 4.5 0 0 1 0-9 4.5 4.5 0 0 0 0-9z"/>
+            </svg>
             <h3>CSS</h3>
             <p>Responsive layouts & design systems</p>
         </div>
         <div class="skill-card">
-            <span class="skill-icon">⚙️</span>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+            </svg>
             <h3>JavaScript</h3>
             <p>Interactive, dynamic experiences</p>
         </div>
         <div class="skill-card">
-            <span class="skill-icon">🗄️</span>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/>
+                <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>
+            </svg>
             <h3>Backend</h3>
             <p>APIs, databases & server logic</p>
         </div>
@@ -146,6 +182,11 @@
 </section>
 
 <footer class="footer">
+    <div class="footer-socials">
+        <a href="https://github.com/au12345" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:asmauomar2@gmail.com">Email</a>
+    </div>
     <p>&copy; <span id="year"></span> Asmau. Built with HTML, CSS & JS.</p>
 </footer>
 
