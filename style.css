@@ -3,25 +3,62 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --bg: #0D1B2A;
+    --bg-alt: #16273D;      /* slightly lighter navy for cards/sections */
+    --accent: #2CE8C5;
+    --accent-dark: #1FA88C; /* for hover states */
+    --text: #E6E6E6;
+    --text-muted: #9BA8B5;
+}
+
 body {
-    background: linear-gradient(135deg,#0A192F,#B8860B);
-    position: relative
-    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
 }
-body ::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+
+h1, h2, h3 {
+    color: var(--text);
 }
-ul {
-    display: flex;
-    gap: 20px;
-    padding-right: 40px;
+
+a {
+    color: var(--accent);
+    text-decoration: none;
 }
-li:last-child {
-    margin-left: auto;
+
+a:hover {
+    color: var(--accent-dark);
+}
+
+button, .btn {
+    background-color: var(--accent);
+    color: var(--bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--accent-dark);
+}
+
+/* Optional: subtle card/section background for About, Skills, Projects */
+.card, section {
+    background-color: var(--bg-alt);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Skill icons or tags */
+.skill-tag {
+    background-color: var(--bg-alt);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
 }
