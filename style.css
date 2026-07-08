@@ -5,6 +5,17 @@
 }
 body {
     background: linear-gradient(135deg,#0A192F,#B8860B);
+    position: relative
+    min-height: 100vh;
+}
+body ::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 ul {
     display: flex;
